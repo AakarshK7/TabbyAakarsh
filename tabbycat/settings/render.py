@@ -90,5 +90,5 @@ if not os.environ.get('DISABLE_SENTRY'):
     )
 
 
-INSTALLED_APPS += ['django.contrib.postgres']
+INSTALLED_APPS += ('django.contrib.postgres',)
 
