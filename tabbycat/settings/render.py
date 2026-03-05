@@ -88,3 +88,7 @@ if not os.environ.get('DISABLE_SENTRY'):
         send_default_pii=True,
         release=TABBYCAT_VERSION,
     )
+
+
+INSTALLED_APPS += ['django.contrib.postgres']
+
