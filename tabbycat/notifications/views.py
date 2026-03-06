@@ -319,14 +319,16 @@ class TemplateEmailCreateView(BaseSelectPeopleEmailView):
             self.tournament.preferences[self.message_template] = form.cleaned_data['message_body']
         email_recipients = list(map(int, self.request.POST.getlist('recipients')))
 
-        async_to_sync(get_channel_layer().send)("notifications", {
+        from .consumers import NotificationQueueConsumer
+        event = {
             "type": "email",
             "message": self.event,
             "extra": self.get_extra(),
             "send_to": email_recipients,
             "subject": form.cleaned_data['subject_line'],
             "body": form.cleaned_data['message_body'],
-        })
+        }
+        NotificationQueueConsumer().email(event)
 
         self.add_sent_notification(len(email_recipients))
         return super().form_valid(form)
