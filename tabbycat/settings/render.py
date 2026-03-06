@@ -93,9 +93,13 @@ if not os.environ.get('DISABLE_SENTRY'):
 INSTALLED_APPS += ('django.contrib.postgres',)
 
 # Email settings
-EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.sendgrid.net')
-EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'apikey')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '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')
+# EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.sendgrid.net')
+# EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+# EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'apikey')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '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')
+# DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'selfcalicotab@gmail.com')
+
+EMAIL_BACKEND = 'resend.django.EmailBackend'
+RESEND_API_KEY = os.environ.get('RESEND_API_KEY', 're_E8YdQF6i_DMow7Z4smRgHUcw53LVRFBnu')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'selfcalicotab@gmail.com')
