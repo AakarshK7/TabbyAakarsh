@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 django-appconf = "*"
 resend = "*"
+django-anymail = "*"
 django-better-admin-arrayfield = "*"
 django-dynamic-preferences = "*"
 django-extensions = "*"
