@@ -113,3 +113,6 @@ ANYMAIL = {
 }
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'selfcalicotab@gmail.com')
+
+
+CELERY_TASK_ALWAYS_EAGER = True
