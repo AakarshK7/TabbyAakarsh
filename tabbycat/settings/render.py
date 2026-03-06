@@ -92,3 +92,10 @@ if not os.environ.get('DISABLE_SENTRY'):
 
 INSTALLED_APPS += ('django.contrib.postgres',)
 
+# Email settings
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'selfcalicotab@gmail.com')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', 'hohuqxlzctbgwyzh')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'selfcalicotab@gmail.com')
