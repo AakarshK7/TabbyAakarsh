@@ -109,7 +109,7 @@ INSTALLED_APPS += ('django.contrib.postgres','anymail',)
 # DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'selfcalicotab@gmail.com')
 
 ANYMAIL = {
-    "SENDINBLUE_API_KEY": os.environ.get('BREVO_API_KEY', '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'),
+    "SENDINBLUE_API_KEY": os.environ.get('BREVO_API_KEY', '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'),
 }
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'selfcalicotab@gmail.com')
