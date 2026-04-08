@@ -112,7 +112,7 @@ ANYMAIL = {
     "SENDINBLUE_API_KEY": os.environ.get('BREVO_API_KEY', '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'),
 }
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
-DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'selfcalicotab@gmail.com')
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'aakarshmishra008@gmail.com')
 
 
 CELERY_TASK_ALWAYS_EAGER = True
